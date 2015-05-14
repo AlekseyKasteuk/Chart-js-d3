@@ -1,0 +1,47 @@
+chart {
+	width: 500px;
+	height: 500px;
+	display: block;
+	position: relative;
+}
+
+chart::after {
+	content: '';
+	height: 0;
+	clear: both;
+}
+
+svg {
+	height: 100%;
+	width: 80%;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+legend {
+	height: 100%;
+	width: 20%;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+#first {
+	width: 500px;
+}
+
+.axis path {
+	fill: none;
+	stroke: #777;
+	shape-rendering: crispEdges;
+}
+.axis text {
+	font-family: Lato;
+	font-size: 13px;
+}
+
+.domain {
+	/*height: 1px;*/
+	/*border-width: 1px;*/
+}
