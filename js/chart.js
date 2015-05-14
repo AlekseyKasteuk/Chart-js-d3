@@ -9,12 +9,6 @@ function start() {
 			.append('legend');
 	d3.selectAll('chart')[0].forEach(function(val) {
 			series(d3.select(val));
-			val.on('mousedown', function(e) {
-				e.preventDefault();
-				if(e.button == 2) {
-					console.log('Ok');
-				}
-			})
 		});
 	return true;
 }
@@ -86,7 +80,7 @@ function getPointData(seriesSet) {
 	seriesSet.forEach(function(val) {
 		data.push(
 			val.attr('data')
-			.match(/\[(-|\+)?\d+ (-|\+)?\d+\]/g)
+			.match(/\[ *(-|\+)?(\d+|\d+\.\d+) +?(-|\+)?(\d+|\d+\.\d+) *\]/g)
 			.map(function(val) {
 				return JSON.parse(val.replace(/ +?/, ','));
 			})
@@ -99,7 +93,6 @@ function createScales(element, seriesSet) {
 	var data = getPointData(seriesSet);
 	var width = element.style("width").slice(0, -2);
 	var height = element.style("height").slice(0, -2);
-	console.log(width, height);
 	var margins = {
 		left: 40,
 		right: 120,
@@ -120,11 +113,11 @@ function createScales(element, seriesSet) {
 	var yAxis = d3.svg.axis().scale(yScale)
 				.orient('left');
 	element.select('svg').append("g")
-        .attr("class", "x axis")
+        .attr("class", "axis x")
         .attr("transform", "translate(0," + (height - margins.bottom) + ")")
         .call(xAxis);
     element.select('svg').append("g")
-        .attr("class", "y axis")
+        .attr("class", "axis y")
         .attr("transform", "translate(" + (margins.left) + ",0)")
         .call(yAxis);
     return {xScale: xScale, yScale: yScale};
@@ -134,11 +127,11 @@ function points(element, set, scales, colors) {
 	var data = getPointData(set);
 	var i = 0;
 	data.forEach(function(v) {
-		element.select('svg').selectAll('circle').data(v)
+		element.select('svg').append('svg').selectAll('circle').data(v)
 			.enter()
 			.append('circle')
-			.attr('cx', function(d) { console.log(d); return scales.xScale(d[0]); })
-			.attr('cy', function(d) { return scales.xScale(-d[1]); })
+			.attr('cx', function(d) { return scales.xScale(d[0]); })
+			.attr('cy', function(d) { return scales.yScale(d[1]); })
 			.attr('r', 2)
 			.attr('fill', colors[i]);
 		i++;
@@ -151,7 +144,7 @@ function lines(element, set, scales, colors) {
 	data.forEach(function(v) {
 		var line = d3.svg.line()
 			.x(function(d) { return scales.xScale(d[0]); })
-			.y(function(d) { return scales.xScale(-d[1]); })
+			.y(function(d) { return scales.yScale(d[1]); })
 			.interpolate("basis");
 		element.select('svg').append('path')
 						.attr('d', line(v))
@@ -161,7 +154,5 @@ function lines(element, set, scales, colors) {
 		i++;
 	});
 }
-
-
 
 start();

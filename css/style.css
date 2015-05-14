@@ -36,9 +36,15 @@ legend {
 	stroke: #777;
 	shape-rendering: crispEdges;
 }
-.axis text {
+.axis  text {
 	font-family: Lato;
 	font-size: 13px;
+}
+
+.x text {
+	/*-webkit-transform: rotate(90deg);*/
+	width: 10px;
+	white-space: normal;
 }
 
 .domain {
