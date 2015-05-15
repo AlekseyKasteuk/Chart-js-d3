@@ -3,6 +3,7 @@ chart {
 	height: 500px;
 	display: block;
 	position: relative;
+	margin: 10px 0;
 }
 
 chart::after {
@@ -47,7 +48,21 @@ legend {
 	white-space: normal;
 }
 
-.domain {
-	/*height: 1px;*/
-	/*border-width: 1px;*/
+#info {
+	fill: #aaa;
+}
+
+.serie {
+	padding: 5px;
+	margin-bottom: 3px;
+}
+
+.serie_color {
+	display: inline-block;
+}
+
+.serie_color~div {
+	display: inline-block;
+	margin-left: 5px;
+
 }
