@@ -225,12 +225,23 @@ function lines(element, set, scales, colors) {
 		var line = d3.svg.line()
 			.x(function(d) { return scales.xScale(d[0]); })
 			.y(function(d) { return scales.yScale(d[1]); })
-			.interpolate("basis");
+		line.interpolate("basis");
 		element.select('svg').append('path')
 						.attr('d', line(v))
 						.attr('stroke', colors[i])
 						.attr('stroke-width', 2)
-						.attr('fill', 'none');
+						.attr('fill', 'none')
+						.on('mouseenter', function() {
+							console.log('enter', d3.mouse(this));
+							console.log('x:', d3.mouse(this)[0]);
+							console.log('y:', d3.mouse(this)[1]);
+							console.log('scale', 
+								[scales.xScale(d3.mouse(this)[0]),
+								scales.xScale(d3.mouse(this)[1])]);
+						})
+						.on('mouseleave', function() {
+							console.log('leave', d3.mouse(this));
+						})
 		i++;
 	});
 }
