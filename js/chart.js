@@ -1,12 +1,10 @@
-var charts = d3.selectAll("chart");
-var panels = [];
-var data;
-
 function start() {
 	d3.selectAll("chart")
-			.append('svg');
-	d3.selectAll("chart")		
-			.append('legend');
+			.append('svg')	
+			.append('g')
+			.attr('class', 'legend')
+			.style('width', 100)
+			.style('height', 100);
 	d3.selectAll('chart')[0].forEach(function(val) {
 			series(d3.select(val));
 		});
@@ -14,6 +12,8 @@ function start() {
 }
 
 function series(element) {
+	var width = element.style("width").slice(0, -2);
+	var height = element.style("height").slice(0, -2);
 	switch(element.attr('type')) {
 		case null: 
 		case 'numeric':
@@ -23,6 +23,10 @@ function series(element) {
 			var linesColor = [];
 			var wholePoints;
 			var scales;
+			var i = 0;
+			var legend = element
+					.select('.legend')
+					.attr('transform', 'translate(' + (width - 110) + ', 0)')
 			element.selectAll('series')[0].forEach(function(val) {
 				var type = d3.select(val).attr('type');
 				var color = d3.select(val).attr('color');
@@ -39,16 +43,19 @@ function series(element) {
 						linesColor.push(!color ? 'red' : color);
 					}
 				}
-				var tmp = d3.select(val.parentNode)
-					.select('legend')
-					.append('div')
-					.attr("class", "serie");
-				tmp.append("div")
-					.attr('class', 'serie_color')
-					.style('background-color', !color ? 'red' : color)
-					.style('width', '15px')
-					.style('height', '15px');
-				tmp.append('div').text(!name ? 'serie' : name);
+				var g = legend.append('g')
+					.attr('transform', 'translate(0, ' + (i * 30 + 5 * i + 5) + ')')
+				g.append('rect')
+					.attr("width", 10)
+					.attr("height", 10)
+					.attr("fill", !color ? 'red' : color)
+					.attr('x', 5)
+					.attr('y', 5);
+				g.append('text')
+					.text(!name ? 'serie' : name)
+					.attr('x',20)
+					.attr('y', 15);
+				i++;
 			});
 			wholePoints = (pointSet.concat(lineSet));
 			if(wholePoints.length) {
@@ -138,7 +145,7 @@ function points(element, set, scales, colors) {
 	var data = getPointData(set);
 	var i = 0;
 	data.forEach(function(v) {
-		element.select('svg').append('svg').selectAll('circle').data(v)
+		element.select('svg').append('g').selectAll('circle').data(v)
 			.enter()
 			.append('circle')
 			.attr('cx', function(d) {
@@ -162,7 +169,6 @@ function points(element, set, scales, colors) {
 									scales.xScale(da[0]) + 50 < 
 									tmp.style('width').slice(0, -2)
 									? offset : -100;
-								console.log(this);
 								return scales.xScale(da[0]) + offset;
 							})
 							.attr('y', function(da) {
@@ -185,7 +191,6 @@ function points(element, set, scales, colors) {
 									scales.xScale(da[0]) + 50 < 
 									tmp.style('width').slice(0, -2)
 									? offset : -100;
-								console.log(this);
 								return scales.xScale(da[0]) + offset;
 							})
 							.attr('y', function(da) {
