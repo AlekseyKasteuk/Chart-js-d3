@@ -150,7 +150,7 @@ function points(element, set, scales, colors) {
 					tmp = d3.select(this.parentNode.parentNode);
 					d3.select(this.parentNode.parentNode)
 							.data([d])
-							.append('rect')
+							.append('text')
 							.attr('id', 'info')
 							.attr('width', 100)
 							.attr('height', 50)
@@ -167,14 +167,44 @@ function points(element, set, scales, colors) {
 							})
 							.attr('y', function(da) {
 								var offset = 
-									scales.yScale(da[1]) > 55 ? -55 : 5;
+									scales.yScale(da[1]) > 28 ? -28 : 10;
 								return scales.yScale(da[1]) + offset;
 							})
+							.text('Serie: ' + 'points')
+					d3.select(this.parentNode.parentNode)
+							.data([d])
 							.append('text')
-							.text(d.toString())
+							.attr('id', 'info')
+							.attr('width', 100)
+							.attr('height', 50)
+							.attr('x', function(da) {
+								var offset = 
+									scales.xScale(da[0]) - 50 > 0
+									? -50 : 0;
+								offset = 
+									scales.xScale(da[0]) + 50 < 
+									tmp.style('width').slice(0, -2)
+									? offset : -100;
+								console.log(this);
+								return scales.xScale(da[0]) + offset;
+							})
+							.attr('y', function(da) {
+								var offset = 
+									scales.yScale(da[1]) > 28 ? -10 : 28;
+								return scales.yScale(da[1]) + offset;
+							})
+							.text(function(da) {
+								var tmp = '';
+								tmp = 'x:' + da[0] + ', y:' + da[1];
+								return tmp;
+							})
 				})
 				d3.select(this).on("mouseleave", function() {
 					var a = d3.select('#info');
+					if(a[0][0]) {
+						a.remove();
+					}
+					a = d3.select('#info');
 					if(a[0][0]) {
 						a.remove();
 					}
