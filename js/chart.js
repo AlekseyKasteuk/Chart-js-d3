@@ -2,9 +2,9 @@ function start() {
 	d3.selectAll("chart")
 			.append('svg')	
 			.append('g')
-			.attr('class', 'legend')
-			.style('width', 100)
-			.style('height', 100);
+			.attr('class', 'legend');
+	d3.selectAll('chart').append('div').attr('class', 'tip')
+		.html("<div class='s'></div><div class='p'></div>")
 	d3.selectAll('chart')[0].forEach(function(val) {
 			series(d3.select(val));
 		});
@@ -19,8 +19,10 @@ function series(element) {
 		case 'numeric':
 			var pointSet = [];
 			var lineSet = [];
+			var splineSet = [];
 			var pointsColor = [];
 			var linesColor = [];
+			var splineColor = [];
 			var wholePoints;
 			var scales;
 			var i = 0;
@@ -43,6 +45,12 @@ function series(element) {
 						linesColor.push(!color ? 'red' : color);
 					}
 				}
+				if(type == 'spline') {
+					if(d3.select(val).attr('data')){
+						splineSet.push(d3.select(val));
+						splineColor.push(!color ? 'red' : color);
+					}
+				}
 				var g = legend.append('g')
 					.attr('transform', 'translate(0, ' + (i * 30 + 5 * i + 5) + ')')
 				g.append('rect')
@@ -57,7 +65,7 @@ function series(element) {
 					.attr('y', 15);
 				i++;
 			});
-			wholePoints = (pointSet.concat(lineSet));
+			wholePoints = pointSet.concat(lineSet).concat(splineSet);
 			if(wholePoints.length) {
 				scales = createScales(element, wholePoints);
 			}
@@ -70,8 +78,11 @@ function series(element) {
 			if(lineSet.length) {
 				lines(element, lineSet, scales, linesColor)
 			}
+			if(splineSet.length) {
+				lines(element, splineSet, scales, splineColor, true)
+			}
 			break;
-		case 'circle':
+		case 'pipe':
 			break;
 		case 'column':
 			break;
@@ -150,69 +161,14 @@ function points(element, set, scales, colors) {
 			.append('circle')
 			.attr('cx', function(d) {
 				d3.select(this).on("mouseenter", function() {
-					var tmp = d3.select('#info');
-					if(tmp[0][0]) {
-						tmp.remove();
-					}
-					tmp = d3.select(this.parentNode.parentNode);
-					d3.select(this.parentNode.parentNode)
-							.data([d])
-							.append('text')
-							.attr('id', 'info')
-							.attr('width', 100)
-							.attr('height', 50)
-							.attr('x', function(da) {
-								var offset = 
-									scales.xScale(da[0]) - 50 > 0
-									? -50 : 0;
-								offset = 
-									scales.xScale(da[0]) + 50 < 
-									tmp.style('width').slice(0, -2)
-									? offset : -100;
-								return scales.xScale(da[0]) + offset;
-							})
-							.attr('y', function(da) {
-								var offset = 
-									scales.yScale(da[1]) > 28 ? -28 : 10;
-								return scales.yScale(da[1]) + offset;
-							})
-							.text('Serie: ' + 'points')
-					d3.select(this.parentNode.parentNode)
-							.data([d])
-							.append('text')
-							.attr('id', 'info')
-							.attr('width', 100)
-							.attr('height', 50)
-							.attr('x', function(da) {
-								var offset = 
-									scales.xScale(da[0]) - 50 > 0
-									? -50 : 0;
-								offset = 
-									scales.xScale(da[0]) + 50 < 
-									tmp.style('width').slice(0, -2)
-									? offset : -100;
-								return scales.xScale(da[0]) + offset;
-							})
-							.attr('y', function(da) {
-								var offset = 
-									scales.yScale(da[1]) > 28 ? -10 : 28;
-								return scales.yScale(da[1]) + offset;
-							})
-							.text(function(da) {
-								var tmp = '';
-								tmp = 'x:' + da[0] + ', y:' + da[1];
-								return tmp;
-							})
+					element.select('.tip').attr('class', 'tip vis')
+						.style('top', (scales.yScale(d[1])) + 'px')
+						.style('left', scales.xScale(d[0]) + 'px');
+					element.select('.tip').select('.s').text('Serie: point');
+					element.select('.tip').select('.p').text('X: ' + d[0] + ', Y:' + d[1]);
 				})
 				d3.select(this).on("mouseleave", function() {
-					var a = d3.select('#info');
-					if(a[0][0]) {
-						a.remove();
-					}
-					a = d3.select('#info');
-					if(a[0][0]) {
-						a.remove();
-					}
+					element.select('.tip').attr('class', 'tip');
 				})
 				return scales.xScale(d[0]);
 			})
@@ -223,29 +179,34 @@ function points(element, set, scales, colors) {
 	});
 }
 
-function lines(element, set, scales, colors) {
+function lines(element, set, scales, colors, spline) {
 	var data = getPointData(set);
 	var i = 0;
 	data.forEach(function(v) {
 		var line = d3.svg.line()
 			.x(function(d) { return scales.xScale(d[0]); })
 			.y(function(d) { return scales.yScale(d[1]); })
-		line.interpolate("basis");
+		if(spline){
+			line.interpolate("basis");
+		}
 		element.select('svg').append('path')
 						.attr('d', line(v))
 						.attr('stroke', colors[i])
 						.attr('stroke-width', 2)
 						.attr('fill', 'none')
-						.on('mouseenter', function() {
-							console.log('enter', d3.mouse(this));
-							console.log('x:', d3.mouse(this)[0]);
-							console.log('y:', d3.mouse(this)[1]);
-							console.log('scale', 
-								[scales.xScale(d3.mouse(this)[0]),
-								scales.xScale(d3.mouse(this)[1])]);
+						.on("mouseenter", function() {
+							var d = d3.mouse(this);
+							element.select('.tip').attr('class', 'tip vis')
+								.style('top', d[1] + 'px')
+								.style('left', d[0] + 'px');
+							element.select('.tip').select('.s').text('Serie: line');
+							element.select('.tip')
+								.select('.p')
+								.text('X: ' + (Math.round(scales.xScale.invert(d[0]) * 1000) / 1000) +
+										 ', Y:' + (Math.round(scales.yScale.invert(d[1]) * 1000) / 1000));
 						})
-						.on('mouseleave', function() {
-							console.log('leave', d3.mouse(this));
+						.on("mouseleave", function() {
+							element.select('.tip').attr('class', 'tip');
 						})
 		i++;
 	});
