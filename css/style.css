@@ -88,3 +88,8 @@ svg {
 .vis {
 	visibility: visible;
 }
+
+.slice text {
+	font-size: 16pt;
+    font-family: Arial;
+}  

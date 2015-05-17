@@ -1,21 +1,21 @@
 function start() {
 	d3.selectAll("chart")
-			.append('svg')	
-			.append('g')
-			.attr('class', 'legend');
+		.append('svg')
+		.append('g')
+		.attr('class', 'legend');
 	d3.selectAll('chart').append('div').attr('class', 'tip')
 		.html("<div class='s'></div><div class='p'></div>")
 	d3.selectAll('chart')[0].forEach(function(val) {
-			series(d3.select(val));
-		});
+		series(d3.select(val));
+	});
 	return true;
 }
 
 function series(element) {
 	var width = element.style("width").slice(0, -2);
 	var height = element.style("height").slice(0, -2);
-	switch(element.attr('type')) {
-		case null: 
+	switch (element.attr('type')) {
+		case null:
 		case 'numeric':
 			var pointSet = [];
 			var lineSet = [];
@@ -27,32 +27,32 @@ function series(element) {
 			var scales;
 			var i = 0;
 			var legend = element
-					.select('.legend')
-					.attr('transform', 'translate(' + (width - 110) + ', 0)')
+				.select('.legend')
+				.attr('transform', 'translate(' + (width - 110) + ', 0)')
 			element.selectAll('series')[0].forEach(function(val) {
 				var type = d3.select(val).attr('type');
 				var color = d3.select(val).attr('color');
 				var name = d3.select(val).attr('name');
-				if(type == 'points' ||type == undefined) {
-					if(d3.select(val).attr('data')){
+				if (type == 'points' || type == undefined) {
+					if (d3.select(val).attr('data')) {
 						pointSet.push(d3.select(val));
 						pointsColor.push(!color ? 'red' : color);
 					}
 				}
-				if(type == 'line') {
-					if(d3.select(val).attr('data')){
+				if (type == 'line') {
+					if (d3.select(val).attr('data')) {
 						lineSet.push(d3.select(val));
 						linesColor.push(!color ? 'red' : color);
 					}
 				}
-				if(type == 'spline') {
-					if(d3.select(val).attr('data')){
+				if (type == 'spline') {
+					if (d3.select(val).attr('data')) {
 						splineSet.push(d3.select(val));
 						splineColor.push(!color ? 'red' : color);
 					}
 				}
 				var g = legend.append('g')
-					.attr('transform', 'translate(0, ' + (i * 30 + 5 * i + 5) + ')')
+					.attr('transform', 'translate(0, ' + (i * 20 + 5 * i + 5) + ')')
 				g.append('rect')
 					.attr("width", 10)
 					.attr("height", 10)
@@ -61,28 +61,57 @@ function series(element) {
 					.attr('y', 5);
 				g.append('text')
 					.text(!name ? 'serie' : name)
-					.attr('x',20)
+					.attr('x', 20)
 					.attr('y', 15);
 				i++;
 			});
 			wholePoints = pointSet.concat(lineSet).concat(splineSet);
-			if(wholePoints.length) {
+			if (wholePoints.length) {
 				scales = createScales(element, wholePoints);
-			}
-			else {
+			} else {
 				return;
 			}
-			if(pointSet.length) {
+			if (pointSet.length) {
 				points(element, pointSet, scales, pointsColor);
 			}
-			if(lineSet.length) {
+			if (lineSet.length) {
 				lines(element, lineSet, scales, linesColor)
 			}
-			if(splineSet.length) {
+			if (splineSet.length) {
 				lines(element, splineSet, scales, splineColor, true)
 			}
 			break;
-		case 'pipe':
+		case 'pie':
+			var pieData = [];
+			var pieColors = [];
+			var legend = element
+				.select('.legend')
+				.attr('transform', 'translate(' + (width - 110) + ', 0)');
+			var i = 0;
+			element.selectAll('series')[0].forEach(function(val) {
+				var color = d3.select(val).attr('color');
+				var name = d3.select(val).attr('name');
+				var data = d3.select(val).attr('data').match(/\d+(\.\d+)?/g)[0];
+				if(!color) { color = 'red' }
+				if(!name) { name = 'pie pice' }
+				if(!data) { data = 0 }
+				pieColors.push(color);
+				pieData.push({data: data, name: name});
+				var g = legend.append('g')
+					.attr('transform', 'translate(0, ' + (i * 20 + 5 * i + 5) + ')')
+				g.append('rect')
+					.attr("width", 10)
+					.attr("height", 10)
+					.attr("fill", !color ? 'red' : color)
+					.attr('x', 5)
+					.attr('y', 5);
+				g.append('text')
+					.text(!name ? 'serie' : name)
+					.attr('x', 20)
+					.attr('y', 15);
+				i++;
+			});
+			pie(element, pieData, pieColors);
 			break;
 		case 'column':
 			break;
@@ -94,14 +123,17 @@ function series(element) {
 function getDomain(data, index) {
 	var d = [];
 	data.forEach(function(v) {
-		v.forEach(function(v) { d.push(v[index]) })
+		v.forEach(function(v) {
+			d.push(v[index])
+		})
 	});
 	return [d.reduce(function(prev, next) {
-		return Math.min(prev, next);
-	}),
-	d.reduce(function(prev, next) {
-		return Math.max(prev, next);
-	})];
+			return Math.min(prev, next);
+		}),
+		d.reduce(function(prev, next) {
+			return Math.max(prev, next);
+		})
+	];
 }
 
 function getPointData(seriesSet) {
@@ -131,25 +163,30 @@ function createScales(element, seriesSet) {
 	var xDomain = getDomain(data, 0);
 	var yDomain = getDomain(data, 1);
 	var xScale = d3.scale.linear()
-				.range([margins.left,
-					width - margins.right])
-				.domain(xDomain);
+		.range([margins.left,
+			width - margins.right
+		])
+		.domain(xDomain);
 	var yScale = d3.scale.linear()
-				.range([height - margins.top,
-					margins.bottom])
-				.domain(yDomain);
+		.range([height - margins.top,
+			margins.bottom
+		])
+		.domain(yDomain);
 	var xAxis = d3.svg.axis().scale(xScale);
 	var yAxis = d3.svg.axis().scale(yScale)
-				.orient('left');
+		.orient('left');
 	element.select('svg').append("g")
-        .attr("class", "axis x")
-        .attr("transform", "translate(0," + (height - margins.bottom) + ")")
-        .call(xAxis);
-    element.select('svg').append("g")
-        .attr("class", "axis y")
-        .attr("transform", "translate(" + (margins.left) + ",0)")
-        .call(yAxis);
-    return {xScale: xScale, yScale: yScale};
+		.attr("class", "axis x")
+		.attr("transform", "translate(0," + (height - margins.bottom) + ")")
+		.call(xAxis);
+	element.select('svg').append("g")
+		.attr("class", "axis y")
+		.attr("transform", "translate(" + (margins.left) + ",0)")
+		.call(yAxis);
+	return {
+		xScale: xScale,
+		yScale: yScale
+	};
 }
 
 function points(element, set, scales, colors) {
@@ -172,7 +209,9 @@ function points(element, set, scales, colors) {
 				})
 				return scales.xScale(d[0]);
 			})
-			.attr('cy', function(d) { return scales.yScale(d[1]); })
+			.attr('cy', function(d) {
+				return scales.yScale(d[1]);
+			})
 			.attr('r', 3)
 			.attr('fill', colors[i])
 		i++;
@@ -184,32 +223,69 @@ function lines(element, set, scales, colors, spline) {
 	var i = 0;
 	data.forEach(function(v) {
 		var line = d3.svg.line()
-			.x(function(d) { return scales.xScale(d[0]); })
-			.y(function(d) { return scales.yScale(d[1]); })
-		if(spline){
+			.x(function(d) {
+				return scales.xScale(d[0]);
+			})
+			.y(function(d) {
+				return scales.yScale(d[1]);
+			})
+		if (spline) {
 			line.interpolate("basis");
 		}
 		element.select('svg').append('path')
-						.attr('d', line(v))
-						.attr('stroke', colors[i])
-						.attr('stroke-width', 2)
-						.attr('fill', 'none')
-						.on("mouseenter", function() {
-							var d = d3.mouse(this);
-							element.select('.tip').attr('class', 'tip vis')
-								.style('top', d[1] + 'px')
-								.style('left', d[0] + 'px');
-							element.select('.tip').select('.s').text('Serie: line');
-							element.select('.tip')
-								.select('.p')
-								.text('X: ' + (Math.round(scales.xScale.invert(d[0]) * 1000) / 1000) +
-										 ', Y:' + (Math.round(scales.yScale.invert(d[1]) * 1000) / 1000));
-						})
-						.on("mouseleave", function() {
-							element.select('.tip').attr('class', 'tip');
-						})
+			.attr('d', line(v))
+			.attr('stroke', colors[i])
+			.attr('stroke-width', 2)
+			.attr('fill', 'none')
+			.on("mouseenter", function() {
+				var d = d3.mouse(this);
+				element.select('.tip').attr('class', 'tip vis')
+					.style('top', d[1] + 'px')
+				   	.style('left', d[0] + 'px');
+				element.select('.tip').select('.s').text('Serie: line');
+				element.select('.tip')
+					.select('.p')
+					.text('X: ' + (Math.round(scales.xScale.invert(d[0]) * 1000) / 1000) +
+						', Y:' + (Math.round(scales.yScale.invert(d[1]) * 1000) / 1000));
+			})
+			.on("mouseleave", function() {
+				element.select('.tip').attr('class', 'tip');
+			})
 		i++;
 	});
+}
+
+function pie(element, data, colors) {
+	var width = element.style("width").slice(0, -2) - 120;
+	var height = element.style("height").slice(0, -2);
+	var radius = Math.min(width, height) / 2;
+	var color = d3.scale.ordinal().range(colors);
+	var arc = d3.svg.arc()
+		.outerRadius(radius - 10)
+		.innerRadius(0);
+	var pie = d3.layout.pie()
+		.sort(null)
+		.value(function(d) { return d.data; })
+	var svg = element.select('svg')
+		.data([data])
+		.append('g')
+		.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+	var arcs = svg.selectAll("g.slice")
+        .data(pie)
+        .enter()                            
+        .append("svg:g")                
+            .attr("class", "slice");    
+		arcs.append("svg:path")
+            .attr("fill", function(d, i) { return color(i); } ) 
+            .attr("d", arc);
+        arcs.append("svg:text")                                     
+            .attr("transform", function(d) {
+            d.innerRadius = 0;
+            d.outerRadius = radius;
+            return "translate(" + arc.centroid(d) + ")";        
+        })
+        .attr("text-anchor", "middle")                          
+        .text(function(d, i) { return data[i].data; });  
 }
 
 start();
