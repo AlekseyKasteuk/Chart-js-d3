@@ -113,7 +113,8 @@ function series(element) {
 			});
 			pie(element, pieData, pieColors);
 			break;
-		case 'column':
+		case 'bar':
+
 			break;
 		default:
 			break;
@@ -274,7 +275,14 @@ function pie(element, data, colors) {
         .data(pie)
         .enter()                            
         .append("svg:g")                
-            .attr("class", "slice");    
+            .attr("class", "slice")
+            .on('mouseenter', function() {
+            	d3.select(this.parentNode).selectAll('.slice').attr('opacity', '0.1');
+            	d3.select(this).attr('opacity', 1);
+            })
+            .on('mouseleave', function() {
+            	d3.select(this.parentNode).selectAll('.slice').attr('opacity', null);
+            })
 		arcs.append("svg:path")
             .attr("fill", function(d, i) { return color(i); } ) 
             .attr("d", arc);
