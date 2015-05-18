@@ -99,22 +99,61 @@ function series(element) {
 				pieData.push({data: data, name: name});
 				var g = legend.append('g')
 					.attr('transform', 'translate(0, ' + (i * 20 + 5 * i + 5) + ')')
-				g.append('rect')
-					.attr("width", 10)
-					.attr("height", 10)
-					.attr("fill", !color ? 'red' : color)
-					.attr('x', 5)
-					.attr('y', 5);
-				g.append('text')
-					.text(!name ? 'serie' : name)
-					.attr('x', 20)
-					.attr('y', 15);
+					g.append('rect')
+						.attr("width", 10)
+						.attr("height", 10)
+						.attr("fill", !color ? 'red' : color)
+						.attr('x', 5)
+						.attr('y', 5);
+					g.append('text')
+						.text(!name ? 'serie' : name)
+						.attr('x', 20)
+						.attr('y', 15);
 				i++;
 			});
 			pie(element, pieData, pieColors);
 			break;
 		case 'bar':
-
+			var bars = [];
+			var wholeData = [];
+			var wholeNames = [];
+			var i = 0, count = 1;
+			var legend = element
+				.select('.legend')
+				.attr('transform', 'translate(' + (width - 110) + ', 0)');
+			element.selectAll('series')[0].forEach(function(val) {
+				var color = d3.select(val).attr('color');
+				var name = d3.select(val).attr('name');
+				var data = d3.select(val).attr('data')
+					.match(/\d+(\.\d+)?/g);
+				if(!color) { color = 'red' }
+				if(!name) { name = 'bar' }
+				wholeData = wholeData.concat(data);
+				data.forEach(function(val) {
+					wholeNames.push(name);
+					bars.push({color: color, name: name, data: val})
+				});
+				var g = legend.append('g')
+					.attr('transform', 'translate(0, ' + (i * 20 + 5 * i + 5) + ')')
+					g.append('rect')
+						.attr("width", 10)
+						.attr("height", 10)
+						.attr("fill", !color ? 'red' : color)
+						.attr('x', 5)
+						.attr('y', 5);
+					g.append('text')
+						.text(!name ? 'serie' : name)
+						.attr('x', 20)
+						.attr('y', 15);
+				i++;
+			});
+			wholeData = wholeData.map(function(v) { return v - 0 });
+			bar(element,
+			createBarsScale(element, wholeData, wholeNames,
+				[0, wholeData.reduce(function(prev, next){
+					return Math.max(prev, next)
+				})]),
+			bars);
 			break;
 		default:
 			break;
@@ -194,7 +233,8 @@ function points(element, set, scales, colors) {
 	var data = getPointData(set);
 	var i = 0;
 	data.forEach(function(v) {
-		element.select('svg').append('g').selectAll('circle').data(v)
+		element.select('svg').append('g')
+			.selectAll('circle').data(v)
 			.enter()
 			.append('circle')
 			.attr('cx', function(d) {
@@ -294,6 +334,74 @@ function pie(element, data, colors) {
         })
         .attr("text-anchor", "middle")                          
         .text(function(d, i) { return data[i].data; });  
+}
+
+function createBarsScale(element, data, names, yDomain) {
+	var width = element.style("width").slice(0, -2);
+	var height = element.style("height").slice(0, -2);
+	var margins = {
+		left: 40,
+		right: 120,
+		top: 20,
+		bottom: 20
+	}
+	var xScale = d3.scale.ordinal()
+		.rangeRoundBands([margins.left,
+			width - margins.right
+		], .1)
+		.domain(names.map(function(d) { return d; }));
+	var yScale = d3.scale.linear()
+		.range([height - margins.top,
+			margins.bottom
+		])
+		.domain(yDomain);
+
+	var xAxis = d3.svg.axis()
+	    .scale(xScale)
+	    .orient("bottom");
+
+	var yAxis = d3.svg.axis()
+	    .scale(yScale)
+	    .orient("left");
+	element.select('svg').append("g")
+		.attr("class", "axis x")
+		.attr("transform", "translate(0," + (height - margins.bottom) + ")")
+		.call(xAxis);
+	element.select('svg').append("g")
+		.attr("class", "axis y")
+		.attr("transform", "translate(" + (margins.left) + ",0)")
+		.call(yAxis);
+	return {x: xScale, y:yScale};
+}
+
+function bar(element, scales, data) {
+	var height = element.style("height").slice(0, -2);
+	var svg = element.select('svg').append("g")
+		.attr("class", "bars")
+	svg.selectAll(".bar")
+      .data(data)
+    	.enter().append("rect")
+    	.attr("class", "bar")
+      .style("fill", function(d) {return d.color; })
+      .attr("x", function(d) { return scales.x(d.name); })
+      .attr("width", function() {  return scales.x.rangeBand() })
+      .attr("y", function(d) { return scales.y(d.data); })
+      .attr("height", function(d) { return height - scales.y(d.data) - 20; })
+      .on('mouseenter', function() {
+       	d3.select(this.parentNode).selectAll('rect').attr('opacity', '0.1');
+        d3.select(this).attr('opacity', 1);
+       })
+       .on('mouseleave', function() {
+        d3.select(this.parentNode).selectAll('rect').attr('opacity', null);
+       })
+    svg.selectAll("text")
+      .data(data)
+    	.enter().append("text")
+      .attr("x", function(d) { return scales.x(d.name) + 5; })
+      .attr("y", function(d) { return scales.y(d.data) + 18; })
+      .attr("font-family", "sans-serif")
+	  .attr("font-size", '14')
+	  .text(function(d) { return d.data })
 }
 
 start();
