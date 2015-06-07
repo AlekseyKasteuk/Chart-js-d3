@@ -1,3 +1,10 @@
+window.onload = start;
+window.onresize = function() {
+	d3.selectAll("chart").select("svg").remove();
+	d3.selectAll("chart").select(".tip").remove();
+	start();
+}
+
 function start() {
 	d3.selectAll("chart")
 		.append('svg')
@@ -8,8 +15,7 @@ function start() {
 	d3.selectAll('chart')[0].forEach(function(val) {
 		series(d3.select(val));
 	});
-	return true;
-}
+};
 
 function series(element) {
 	var width = element.style("width").slice(0, -2);
@@ -67,7 +73,7 @@ function series(element) {
 			});
 			wholePoints = pointSet.concat(lineSet).concat(splineSet);
 			if (wholePoints.length) {
-				scales = createScales(element, wholePoints);
+				scales = createNumericScales(element, wholePoints);
 			} else {
 				return;
 			}
@@ -91,10 +97,16 @@ function series(element) {
 			element.selectAll('series')[0].forEach(function(val) {
 				var color = d3.select(val).attr('color');
 				var name = d3.select(val).attr('name');
-				var data = d3.select(val).attr('data').match(/\d+(\.\d+)?/g)[0];
+				var data = d3.select(val).attr('data');
+				try {
+					data = !data ? 0 :
+					data.match(/^( *)\d+(\.\d+)?( *)$/g)[0];
+				}
+				catch(e) {
+					data = 0;
+				}
 				if(!color) { color = 'red' }
 				if(!name) { name = 'pie pice' }
-				if(!data) { data = 0 }
 				pieColors.push(color);
 				pieData.push({data: data, name: name});
 				var g = legend.append('g')
@@ -124,15 +136,21 @@ function series(element) {
 			element.selectAll('series')[0].forEach(function(val) {
 				var color = d3.select(val).attr('color');
 				var name = d3.select(val).attr('name');
-				var data = d3.select(val).attr('data')
-					.match(/\d+(\.\d+)?/g);
+				var data = d3.select(val).attr('data');
+				try {
+					data = !data ? 0 :
+					data.match(/^( *)\d+(\.\d+)?( *)$/g)[0];
+				}
+				catch(e) {
+					data = 0;
+				}
+				if(!data) { data = [0] }
 				if(!color) { color = 'red' }
-				if(!name) { name = 'bar' }
+				if(!name) { name = 'bar_' + i }
 				wholeData = wholeData.concat(data);
-				data.forEach(function(val) {
-					wholeNames.push(name);
-					bars.push({color: color, name: name, data: val})
-				});
+				while(wholeNames.indexOf(name) != -1) { name += "_" + i }
+				wholeNames.push(name);
+				bars.push({color: color, name: name, data: data});
 				var g = legend.append('g')
 					.attr('transform', 'translate(0, ' + (i * 20 + 5 * i + 5) + ')')
 					g.append('rect')
@@ -154,6 +172,49 @@ function series(element) {
 					return Math.max(prev, next)
 				})]),
 			bars);
+			break;
+		case '3d-circle':
+		case '3d-pie': 
+			var data3d = [];
+			var colors = [];
+			var legend = element
+				.select('.legend')
+				.attr('transform', 'translate(' + (width - 110) + ', 0)');
+			var i = 0;
+			element.selectAll('series')[0].forEach(function(val) {
+				var color = d3.select(val).attr('color');
+				var name = d3.select(val).attr('name');
+				var data = d3.select(val).attr('data');
+				try {
+					data = !data ? 0 :
+					data.match(/^( *)\d+(\.\d+)?( *)$/g)[0];
+				}
+				catch(e) {
+					data = 0;
+				}
+				data = parseInt(data);
+				if(!color) { color = 'red' }
+				if(!name) { name = 'pie pice' }
+				if(!data) { data = 0 }
+				colors.push(color);
+				data3d.push({value: data, label: name, color: color});
+				var g = legend.append('g')
+					.attr('transform', 'translate(0, ' + (i * 20 + 5 * i + 5) + ')')
+					g.append('rect')
+						.attr("width", 10)
+						.attr("height", 10)
+						.attr("fill", !color ? 'red' : color)
+						.attr('x', 5)
+						.attr('y', 5);
+					g.append('text')
+						.text(!name ? 'serie' : name)
+						.attr('x', 20)
+						.attr('y', 15);
+				i++;
+			});
+			var r = width - 110 < height ? (width - 110) / 2 : height / 2;
+			var ir = element.attr('type') == "3d-pie" ? 0 : 0.4;
+			Donut3D.draw(element, data3d, (width - 110) / 2, height / 2, (width - 110) / 2.5, height / 4, 30, ir);
 			break;
 		default:
 			break;
@@ -190,7 +251,7 @@ function getPointData(seriesSet) {
 	return data;
 }
 
-function createScales(element, seriesSet) {
+function createNumericScales(element, seriesSet) {
 	var data = getPointData(seriesSet);
 	var width = element.style("width").slice(0, -2);
 	var height = element.style("height").slice(0, -2);
@@ -397,11 +458,9 @@ function bar(element, scales, data) {
     svg.selectAll("text")
       .data(data)
     	.enter().append("text")
-      .attr("x", function(d) { return scales.x(d.name) + 5; })
-      .attr("y", function(d) { return scales.y(d.data) + 18; })
+      .attr("x", function(d) { return scales.x(d.name); })
+      .attr("y", function(d) { return scales.y(d.data) - 2; })
       .attr("font-family", "sans-serif")
 	  .attr("font-size", '14')
 	  .text(function(d) { return d.data })
 }
-
-start();
