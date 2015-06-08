@@ -1,0 +1,28 @@
+{
+  "name": "Chart",
+  "version": "1.0.0",
+  "description": "Demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlekseyKasteuk/Chart-js-d3.git"
+  },
+  "keywords": [
+    "d3",
+    "js",
+    "chart",
+    "demo"
+  ],
+  "author": "Aleksey Kasteuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlekseyKasteuk/Chart-js-d3/issues"
+  },
+  "homepage": "https://github.com/AlekseyKasteuk/Chart-js-d3",
+  "devDependencies": {
+    "Chart-js-d3": "^1.0.1"
+  }
+}
