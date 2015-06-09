@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.3)  9 JUN 2015 03:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.3)  9 JUN 2015 05:10
 entering extended mode
 **Report.tex
 (D:\ProjectsPHP\Chart\documentation\Report.tex
@@ -536,26 +536,47 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen113
 \Gin@req@width=\dimen114
 )
-(D:\MikTex\tex\latex\titlesec\titlesec.sty
-Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
-\ttl@box=\box26
-\beforetitleunit=\skip43
-\aftertitleunit=\skip44
-\ttl@plus=\dimen115
-\ttl@minus=\dimen116
-\ttl@toksa=\toks18
-\titlewidth=\dimen117
-\titlewidthlast=\dimen118
-\titlewidthfirst=\dimen119
+(D:\MikTex\tex\latex\listings\listings.sty
+\lst@mode=\count93
+\lst@gtempboxa=\box26
+\lst@token=\toks18
+\lst@length=\count94
+\lst@currlwidth=\dimen115
+\lst@column=\count95
+\lst@pos=\count96
+\lst@lostspace=\dimen116
+\lst@width=\dimen117
+\lst@newlines=\count97
+\lst@lineno=\count98
+\lst@maxwidth=\dimen118
+
+(D:\MikTex\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count99
+\lst@skipnumbers=\count100
+\lst@framebox=\box27
 )
-(D:\MikTex\tex\latex\titlesec\block.tss
-File: block.tss 2011/12/15
+(D:\MikTex\tex\latex\listings\listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(D:\MikTex\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+ (D:\MikTex\tex\latex\00miktex\color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-(D:\MikTex\tex\latex\titlesec\titletoc.sty
-Package: titletoc 2011/12/15 v1.6 TOC entries
-\ttl@leftsep=\dimen120
-)
-(D:\MikTex\tex\latex\hyperref\hyperref.sty
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+) (D:\MikTex\tex\latex\hyperref\hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
 (D:\MikTex\tex\generic\oberdiek\hobsub-hyperref.sty
@@ -607,16 +628,16 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (D:\MikTex\tex\latex\oberdiek\kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen121
-\Hy@linkcounter=\count93
-\Hy@pagecounter=\count94
+\@linkdim=\dimen119
+\Hy@linkcounter=\count101
+\Hy@pagecounter=\count102
 
 (D:\MikTex\tex\latex\hyperref\pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count95
+\Hy@SavedSpaceFactor=\count103
 Package hyperref Info: Option `unicode' set `true' on input line 3411.
 
 (D:\MikTex\tex\latex\hyperref\puenc.def
@@ -634,16 +655,16 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count96
+\c@Hy@tempcnt=\count104
  (D:\MikTex\tex\latex\url\url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen122
-\Fld@menulength=\count97
-\Field@Width=\dimen123
-\Fld@charsize=\dimen124
+\XeTeXLinkMargin=\dimen120
+\Fld@menulength=\count105
+\Field@Width=\dimen121
+\Fld@charsize=\dimen122
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -653,24 +674,45 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count98
-\c@Item=\count99
-\c@Hfootnote=\count100
+\Hy@abspage=\count106
+\c@Item=\count107
+\c@Hfootnote=\count108
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (D:\MikTex\tex\latex\hyperref\hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count101
-\c@bookmark@seq@number=\count102
+\Fld@listcount=\count109
+\c@bookmark@seq@number=\count110
 
 (D:\MikTex\tex\latex\oberdiek\rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip45
+\Hy@SectionHShift=\skip43
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 17.
+
+(D:\MikTex\tex\latex\titlesec\titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box28
+\beforetitleunit=\skip44
+\aftertitleunit=\skip45
+\ttl@plus=\dimen123
+\ttl@minus=\dimen124
+\ttl@toksa=\toks19
+\titlewidth=\dimen125
+\titlewidthlast=\dimen126
+\titlewidthfirst=\dimen127
+)
+(D:\MikTex\tex\latex\titlesec\block.tss
+File: block.tss 2011/12/15
+)
+(D:\MikTex\tex\latex\titlesec\titletoc.sty
+Package: titletoc 2011/12/15 v1.6 TOC entries
+\ttl@leftsep=\dimen128
 )
 (D:\ProjectsPHP\Chart\documentation\Report.aux
 
@@ -703,25 +745,43 @@ LaTeX Warning: Label `ris:image' multiply defined.
 
 LaTeX Warning: Label `ris:image' multiply defined.
 
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -759,31 +819,32 @@ LaTeX Font Info:    ... okay on input line 46.
 
 (D:\MikTex\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count103
-\scratchdimen=\dimen125
-\scratchbox=\box27
-\nofMPsegments=\count104
-\nofMParguments=\count105
-\everyMPshowfont=\toks19
-\MPscratchCnt=\count106
-\MPscratchDim=\dimen126
-\MPnumerator=\count107
-\makeMPintoPDFobject=\count108
-\everyMPtoPDFconversion=\toks20
+\scratchcounter=\count111
+\scratchdimen=\dimen129
+\scratchbox=\box29
+\nofMPsegments=\count112
+\nofMParguments=\count113
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count114
+\MPscratchDim=\dimen130
+\MPnumerator=\count115
+\makeMPintoPDFobject=\count116
+\everyMPtoPDFconversion=\toks21
 )
-\AtBeginShipoutBox=\box28
-Package hyperref Info: Link coloring OFF on input line 46.
+\c@lstlisting=\count117
+\AtBeginShipoutBox=\box30
+Package hyperref Info: Link coloring ON on input line 52.
  (D:\MikTex\tex\latex\hyperref\nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (D:\MikTex\tex\generic\oberdiek\gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count109
+\c@section@level=\count118
 )
-LaTeX Info: Redefining \ref on input line 46.
-LaTeX Info: Redefining \pageref on input line 46.
-LaTeX Info: Redefining \nameref on input line 46.
+LaTeX Info: Redefining \ref on input line 52.
+LaTeX Info: Redefining \pageref on input line 52.
+LaTeX Info: Redefining \nameref on input line 52.
 
 (D:\ProjectsPHP\Chart\documentation\Report.out)
 (D:\ProjectsPHP\Chart\documentation\Report.out)
@@ -792,9 +853,9 @@ LaTeX Info: Redefining \nameref on input line 46.
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    External font `cmex7' loaded for size
-(Font)              <7> on input line 88.
+(Font)              <7> on input line 94.
  [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 130--130
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
 |\T2A/cmr/bx/n/20.74 СОДЕРЖАНИЕ|
  []
 
@@ -803,7 +864,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 130--130
  [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
 |\T2A/cmr/bx/n/20.74 Введение|
  []
 
@@ -814,20 +875,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--136
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 142.
+(hyperref)                replaced by space on input line 148.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--142
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
 |\T2A/cmr/bx/n/20.74 1 По-ста-нов-казадачи|
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 147.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 153.
 
 (D:\MikTex\tex\latex\base\omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 147.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 153.
  [6
 
 ]
@@ -835,57 +896,27 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 157.
+(hyperref)                replaced by space on input line 163.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 157.
+(hyperref)                replaced by space on input line 163.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--157
+Underfull \hbox (badness 10000) in paragraph at lines 163--163
 |\T2A/cmr/bx/n/20.74 2 Раз-ра-бот-капрограммногосредства|
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--158
+Underfull \hbox (badness 10000) in paragraph at lines 164--164
  |[]\T2A/cmr/bx/n/17.28 Обоснованиевыбораинформационныхтехнологий|
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 158.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 158.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 158.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--160
- |[]\T2A/cmr/bx/n/17.28 Используемыесредстваразработки|
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 160.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 160.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
- |[]\T2A/cmr/bx/n/17.28 Разработкапрограммногосредства|
- []
+(hyperref)                replaced by space on input line 164.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -899,358 +930,388 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 166--166
+ |[]\T2A/cmr/bx/n/17.28 Используемыесредстваразработки|
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 166.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 166.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--170
+ |[]\T2A/cmr/bx/n/17.28 Разработкапрограммногосредства|
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 170.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 170.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--172
  |[]\T2A/cmr/bx/n/14.4 Запускотрисовкиграфиковнастранице|
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 166.
+(hyperref)                replaced by space on input line 172.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 166.
+(hyperref)                replaced by space on input line 172.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 166.
+(hyperref)                replaced by space on input line 172.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 166.
+(hyperref)                replaced by space on input line 172.
 
-LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 168
+LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 174
 .
 (D:\MikTex\tex\latex\cyrillic\t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 ) [7
 
 ]
-<img/start.png, id=171, 181.42781pt x 302.63063pt>
+<img/start.png, id=199, 181.42781pt x 302.63063pt>
 File: img/start.png Graphic file (type png)
  <use img/start.png>
-Package pdftex.def Info: img/start.png used on input line 189.
+Package pdftex.def Info: img/start.png used on input line 195.
 (pdftex.def)             Requested size: 181.42737pt x 302.62988pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--193
+Underfull \hbox (badness 10000) in paragraph at lines 199--199
  |[]\T2A/cmr/bx/n/14.4 Добавлениеэлементавлегенду|
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 193.
+(hyperref)                replaced by space on input line 199.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 193.
+(hyperref)                replaced by space on input line 199.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 193.
+(hyperref)                replaced by space on input line 199.
 
 [8 <D:/ProjectsPHP/Chart/documentation/img/start.png>]
-<img/legend_draw.png, id=177, 181.42781pt x 302.63063pt>
+<img/legend_draw.png, id=205, 181.42781pt x 302.63063pt>
 File: img/legend_draw.png Graphic file (type png)
 
 <use img/legend_draw.png>
-Package pdftex.def Info: img/legend_draw.png used on input line 213.
+Package pdftex.def Info: img/legend_draw.png used on input line 219.
 (pdftex.def)             Requested size: 181.42737pt x 302.62988pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--217
+Underfull \hbox (badness 10000) in paragraph at lines 223--223
  |[]\T2A/cmr/bx/n/14.4 Обработкаэлемента<chart>взависимостиоттипа|
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 217.
+(hyperref)                replaced by space on input line 223.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 217.
+(hyperref)                replaced by space on input line 223.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 217.
+(hyperref)                replaced by space on input line 223.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 217.
+(hyperref)                replaced by space on input line 223.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 217.
+(hyperref)                replaced by space on input line 223.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 217.
+(hyperref)                replaced by space on input line 223.
 
 [9 <D:/ProjectsPHP/Chart/documentation/img/legend_draw.png>]
-<img/series.png, id=183, 554.82281pt x 438.13687pt>
+<img/series.png, id=211, 554.82281pt x 438.13687pt>
 File: img/series.png Graphic file (type png)
  <use img/series.png>
-Package pdftex.def Info: img/series.png used on input line 235.
+Package pdftex.def Info: img/series.png used on input line 241.
 (pdftex.def)             Requested size: 388.37332pt x 306.69371pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--239
+Underfull \hbox (badness 10000) in paragraph at lines 245--245
  |[]\T2A/cmr/bx/n/14.4 Получениеобластиотображениязначенийграфика|
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 239.
+(hyperref)                replaced by space on input line 245.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 239.
+(hyperref)                replaced by space on input line 245.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 239.
+(hyperref)                replaced by space on input line 245.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 239.
+(hyperref)                replaced by space on input line 245.
 
 [10 <D:/ProjectsPHP/Chart/documentation/img/series.png>]
-<img/getDomain.png, id=195, 187.45032pt x 227.34938pt>
+<img/getDomain.png, id=223, 187.45032pt x 227.34938pt>
 File: img/getDomain.png Graphic file (type png)
  <use img/getDomain.png>
-Package pdftex.def Info: img/getDomain.png used on input line 259.
+Package pdftex.def Info: img/getDomain.png used on input line 265.
 (pdftex.def)             Requested size: 187.44984pt x 227.34882pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
+Underfull \hbox (badness 10000) in paragraph at lines 269--269
  |[]\T2A/cmr/bx/n/14.4 Получениемассивазначенийдляграфика|
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 263.
+(hyperref)                replaced by space on input line 269.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 263.
+(hyperref)                replaced by space on input line 269.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 263.
+(hyperref)                replaced by space on input line 269.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 263.
+(hyperref)                replaced by space on input line 269.
 
 [11 <D:/ProjectsPHP/Chart/documentation/img/getDomain.png>]
-<img/getPointData.png, id=201, 187.45032pt x 251.43938pt>
+<img/getPointData.png, id=229, 187.45032pt x 251.43938pt>
 File: img/getPointData.png Graphic file (type png)
 
 <use img/getPointData.png>
-Package pdftex.def Info: img/getPointData.png used on input line 282.
+Package pdftex.def Info: img/getPointData.png used on input line 288.
 (pdftex.def)             Requested size: 187.44984pt x 251.43875pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--286
+Underfull \hbox (badness 10000) in paragraph at lines 292--292
  |[]\T2A/cmr/bx/n/14.4 Созданиешкалыдляграфика|
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 286.
+(hyperref)                replaced by space on input line 292.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 286.
+(hyperref)                replaced by space on input line 292.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 286.
+(hyperref)                replaced by space on input line 292.
 
 [12 <D:/ProjectsPHP/Chart/documentation/img/getPointData.png>]
-<img/createNumericScales.png, id=207, 187.45032pt x 261.22594pt>
+<img/createNumericScales.png, id=235, 187.45032pt x 261.22594pt>
 File: img/createNumericScales.png Graphic file (type png)
 
 <use img/createNumericScales.png>
-Package pdftex.def Info: img/createNumericScales.png used on input line 290.
+Package pdftex.def Info: img/createNumericScales.png used on input line 296.
 (pdftex.def)             Requested size: 187.44984pt x 261.22528pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--294
+Underfull \hbox (badness 10000) in paragraph at lines 300--300
  |[]\T2A/cmr/bx/n/14.4 Отрисовкаточекнаграфике|
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 294.
+(hyperref)                replaced by space on input line 300.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 294.
+(hyperref)                replaced by space on input line 300.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 294.
+(hyperref)                replaced by space on input line 300.
 
 [13 <D:/ProjectsPHP/Chart/documentation/img/createNumericScales.png>]
-<img/point.png, id=214, 187.45032pt x 204.765pt>
+<img/point.png, id=242, 187.45032pt x 204.765pt>
 File: img/point.png Graphic file (type png)
  <use img/point.png>
-Package pdftex.def Info: img/point.png used on input line 312.
+Package pdftex.def Info: img/point.png used on input line 318.
 (pdftex.def)             Requested size: 187.44984pt x 204.76448pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--316
+Underfull \hbox (badness 10000) in paragraph at lines 322--322
  |[]\T2A/cmr/bx/n/14.4 Отрисокаломанныхлинийисплайновнаграфике|
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 316.
+(hyperref)                replaced by space on input line 322.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 316.
+(hyperref)                replaced by space on input line 322.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 316.
+(hyperref)                replaced by space on input line 322.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 316.
+(hyperref)                replaced by space on input line 322.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 316.
+(hyperref)                replaced by space on input line 322.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 316.
+(hyperref)                replaced by space on input line 322.
 
 [14 <D:/ProjectsPHP/Chart/documentation/img/point.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 338--338
+Underfull \hbox (badness 10000) in paragraph at lines 344--344
  |[]\T2A/cmr/bx/n/14.4 Отрисокакруговойдиаграммы|
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 338.
+(hyperref)                replaced by space on input line 344.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 338.
+(hyperref)                replaced by space on input line 344.
 
-<img/pie.png, id=220, 187.45032pt x 377.91188pt>
+<img/pie.png, id=248, 187.45032pt x 377.91188pt>
 File: img/pie.png Graphic file (type png)
  <use img/pie.png>
-Package pdftex.def Info: img/pie.png used on input line 341.
+Package pdftex.def Info: img/pie.png used on input line 347.
 (pdftex.def)             Requested size: 187.44984pt x 377.91095pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--346
+Underfull \hbox (badness 10000) in paragraph at lines 352--352
  |[]\T2A/cmr/bx/n/14.4 Созданиешкалдлягистограммы|
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 346.
+(hyperref)                replaced by space on input line 352.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 346.
+(hyperref)                replaced by space on input line 352.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 346.
+(hyperref)                replaced by space on input line 352.
 
 [15 <D:/ProjectsPHP/Chart/documentation/img/pie.png>]
-Overfull \hbox (42.5054pt too wide) in paragraph at lines 376--376
+Overfull \hbox (42.5054pt too wide) in paragraph at lines 382--382
 []    \T2A/cmtt/m/n/14.4 .attr("transform", "translate(0," + (height - margins.
 bottom) + ")")[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--377
+Underfull \hbox (badness 10000) in paragraph at lines 383--383
  |[]\T2A/cmr/bx/n/14.4 Отображениегистограммы|
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 377.
+(hyperref)                replaced by space on input line 383.
 
-[16] <img/bar.png, id=232, 187.45032pt x 323.70938pt>
+[16] <img/bar.png, id=260, 187.45032pt x 323.70938pt>
 File: img/bar.png Graphic file (type png)
  <use img/bar.png>
-Package pdftex.def Info: img/bar.png used on input line 381.
+Package pdftex.def Info: img/bar.png used on input line 387.
 (pdftex.def)             Requested size: 187.44984pt x 323.70859pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--386
+Underfull \hbox (badness 10000) in paragraph at lines 392--392
  |[]\T2A/cmr/bx/n/14.4 3Dэлементы|
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 386.
+(hyperref)                replaced by space on input line 392.
 
 [17 <D:/ProjectsPHP/Chart/documentation/img/bar.png>]
-<img/3D.png, id=238, 187.45032pt x 323.70938pt>
+<img/3D.png, id=266, 187.45032pt x 323.70938pt>
 File: img/3D.png Graphic file (type png)
  <use img/3D.png>
-Package pdftex.def Info: img/3D.png used on input line 390.
+Package pdftex.def Info: img/3D.png used on input line 396.
 (pdftex.def)             Requested size: 187.44984pt x 323.70859pt.
  [18 <D:/ProjectsPHP/Chart/documentation/img/3D.png>]
 {\Russian \CYRG \cyrl \cyra \cyrv \cyra } 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 394.
+(hyperref)                replaced by space on input line 400.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 394.
+(hyperref)                replaced by space on input line 400.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--394
+Underfull \hbox (badness 10000) in paragraph at lines 400--400
 |\T2A/cmr/bx/n/20.74 3 Те-сти-ро-ва-ниепрограммногосредства|
  []
 
-<img/tests.png, id=244, 295.1025pt x 443.40656pt>
+<img/tests.png, id=272, 295.1025pt x 443.40656pt>
 File: img/tests.png Graphic file (type png)
  <use img/tests.png>
-Package pdftex.def Info: img/tests.png used on input line 404.
+Package pdftex.def Info: img/tests.png used on input line 410.
 (pdftex.def)             Requested size: 253.78769pt x 381.32896pt.
  [19
 
@@ -1259,57 +1320,748 @@ Package pdftex.def Info: img/tests.png used on input line 404.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 408.
+(hyperref)                replaced by space on input line 414.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--408
+Underfull \hbox (badness 10000) in paragraph at lines 414--414
 |\T2A/cmr/bx/n/20.74 4 Ру-ко-вод-ствопользователя|
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--409
+Underfull \hbox (badness 10000) in paragraph at lines 415--415
  |[]\T2A/cmr/bx/n/17.28 Установка|
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 410--410
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
  |[]\T2A/cmr/bx/n/14.4 Установкачерезnpm|
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 410.
+(hyperref)                replaced by space on input line 416.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
-(hyperref)                replaced by space on input line 410.
+(hyperref)                replaced by space on input line 416.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 421.
-[20
+<img/npm.png, id=281, 630.10406pt x 320.69812pt>
+File: img/npm.png Graphic file (type png)
+ <use img/npm.png>
+Package pdftex.def Info: img/npm.png used on input line 423.
+(pdftex.def)             Requested size: 472.57689pt x 240.523pt.
+ [20
+
+ <D:/ProjectsPHP/Chart/documentation/img/npm.png>]
+<img/screen_npm.png, id=288, 1028.34187pt x 554.07pt>
+File: img/screen_npm.png Graphic file (type png)
+ <use img/screen_npm.png>
+Package pdftex.def Info: img/screen_npm.png used on input line 440.
+(pdftex.def)             Requested size: 462.74957pt x 249.3292pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 444--444
+ |[]\T2A/cmr/bx/n/14.4 Скачатьдемо-проектсGitHub|
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 444.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 444.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 444.
+
+[21 <D:/ProjectsPHP/Chart/documentation/img/screen_npm.png>]
+<img/demo.png, id=296, 1028.34187pt x 554.07pt>
+File: img/demo.png Graphic file (type png)
+ <use img/demo.png>
+Package pdftex.def Info: img/demo.png used on input line 449.
+(pdftex.def)             Requested size: 462.74957pt x 249.3292pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 453--453
+ |[]\T2A/cmr/bx/n/17.28 Использование|
+ []
+
+
+LaTeX Warning: Hyper reference `2.3.3' on page 22 undefined on input line 454.
+
+[22 <D:/ProjectsPHP/Chart/documentation/img/demo.png>]
+<img/useing.png, id=303, 1028.34187pt x 554.07pt>
+File: img/useing.png Graphic file (type png)
+ <use img/useing.png>
+Package pdftex.def Info: img/useing.png used on input line 457.
+(pdftex.def)             Requested size: 462.74957pt x 249.3292pt.
+
+<img/useing_.png, id=304, 1027.58907pt x 327.47343pt>
+File: img/useing_.png Graphic file (type png)
+ <use img/useing_.png>
+Package pdftex.def Info: img/useing_.png used on input line 462.
+(pdftex.def)             Requested size: 462.41081pt x 147.36168pt.
+
+[23 <D:/ProjectsPHP/Chart/documentation/img/useing.png> <D:/ProjectsPHP/Chart/d
+ocumentation/img/useing_.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 468--468
+|\T2A/cmr/bx/n/20.74 Заключение|
+ []
+
+[24
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 421.
+Underfull \hbox (badness 10000) in paragraph at lines 479--479
+|\T2A/cmr/bx/n/20.74 Списокиспользованнойлитературы|
+ []
+
+[25
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 480--480
+|\T2A/cmr/bx/n/20.74 Литература|
+ []
+
+[26
+
+pdfTeX warning (ext4): destination with the same identifier (name{cite.}) has b
+een already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.485 \newpage
+              ]
+Underfull \hbox (badness 10000) in paragraph at lines 487--487
+|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--487
+||
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 488--488
+|\T2A/cmr/bx/n/17.28 chart.js|
+ []
+
+
+Overfull \hbox (75.55478pt too wide) in paragraph at lines 511--512
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+[27
+
+]
+Overfull \hbox (50.88191pt too wide) in paragraph at lines 541--542
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.76047pt too wide) in paragraph at lines 542--543
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+[28]
+Overfull \hbox (34.43333pt too wide) in paragraph at lines 567--568
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.53618pt too wide) in paragraph at lines 569--570
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.76047pt too wide) in paragraph at lines 580--581
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (59.1062pt too wide) in paragraph at lines 588--589
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.76047pt too wide) in paragraph at lines 590--591
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+[29]
+Overfull \hbox (59.1062pt too wide) in paragraph at lines 617--618
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.76047pt too wide) in paragraph at lines 618--619
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (50.88191pt too wide) in paragraph at lines 633--634
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (26.20905pt too wide) in paragraph at lines 639--640
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[30]
+Overfull \hbox (59.1062pt too wide) in paragraph at lines 653--654
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.76047pt too wide) in paragraph at lines 655--656
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (26.20905pt too wide) in paragraph at lines 671--672
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (75.55478pt too wide) in paragraph at lines 675--676
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+
+Overfull \hbox (404.52634pt too wide) in paragraph at lines 677--678
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][] 
+ []
+
+[31]
+Overfull \hbox (92.00336pt too wide) in paragraph at lines 705--706
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[32]
+Overfull \hbox (108.45193pt too wide) in paragraph at lines 741--742
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.98476pt too wide) in paragraph at lines 745--746
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[33]
+Overfull \hbox (67.33049pt too wide) in paragraph at lines 766--767
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (182.47054pt too wide) in paragraph at lines 767--768
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[34]
+Overfull \hbox (42.65762pt too wide) in paragraph at lines 807--808
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (174.24625pt too wide) in paragraph at lines 810--811
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (149.57338pt too wide) in paragraph at lines 811--812
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (124.90051pt too wide) in paragraph at lines 834--835
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (157.79767pt too wide) in paragraph at lines 841--842
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (149.57338pt too wide) in paragraph at lines 845--846
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[35] [36]
+Overfull \hbox (108.45193pt too wide) in paragraph at lines 889--890
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.98476pt too wide) in paragraph at lines 893--894
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (34.43333pt too wide) in paragraph at lines 908--909
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (133.1248pt too wide) in paragraph at lines 910--911
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (133.1248pt too wide) in paragraph at lines 912--913
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (100.22765pt too wide) in paragraph at lines 916--917
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.76047pt too wide) in paragraph at lines 922--923
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 928--928
+|\T2A/cmr/bx/n/17.28 3d.js|
+ []
+
+
+Overfull \hbox (231.81627pt too wide) in paragraph at lines 942--943
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (470.32065pt too wide) in paragraph at lines 943--944
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (100.22765pt too wide) in paragraph at lines 948--949
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (50.88191pt too wide) in paragraph at lines 949--951
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (453.87207pt too wide) in paragraph at lines 957--958
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][] 
+ []
+
+
+Overfull \hbox (100.22765pt too wide) in paragraph at lines 962--963
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (50.88191pt too wide) in paragraph at lines 963--965
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[38]
+Overfull \hbox (618.35785pt too wide) in paragraph at lines 971--972
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.76047pt too wide) in paragraph at lines 975--977
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (240.04056pt too wide) in paragraph at lines 977--979
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Overfull \hbox (355.1806pt too wide) in paragraph at lines 979--980
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][] 
+ []
+
+
+Overfull \hbox (322.28345pt too wide) in paragraph at lines 982--983
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (157.79767pt too wide) in paragraph at lines 983--984
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (108.45193pt too wide) in paragraph at lines 984--985
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (289.38629pt too wide) in paragraph at lines 987--988
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.76047pt too wide) in paragraph at lines 989--990
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.76047pt too wide) in paragraph at lines 990--991
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (322.28345pt too wide) in paragraph at lines 993--994
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (157.79767pt too wide) in paragraph at lines 994--995
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (92.00336pt too wide) in paragraph at lines 995--996
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (240.04056pt too wide) in paragraph at lines 998--999
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (281.162pt too wide) in paragraph at lines 999--1000
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][] 
+ []
+
+
+Overfull \hbox (281.162pt too wide) in paragraph at lines 1000--1001
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1007--1007
+|\T2A/cmr/bx/n/17.28 style.css|
+ []
+
+[39] [40] [41]
+Underfull \hbox (badness 10000) in paragraph at lines 1110--1110
+|\T2A/cmr/bx/n/17.28 chart.spec.js|
+ []
+
+
+Overfull \hbox (141.34909pt too wide) in paragraph at lines 1115--1116
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (141.34909pt too wide) in paragraph at lines 1123--1124
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[42]
+Overfull \hbox (124.90051pt too wide) in paragraph at lines 1152--1153
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (174.24625pt too wide) in paragraph at lines 1153--1154
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (174.24625pt too wide) in paragraph at lines 1154--1155
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.53618pt too wide) in paragraph at lines 1175--1176
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[43]
+Overfull \hbox (166.02196pt too wide) in paragraph at lines 1179--1180
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (59.1062pt too wide) in paragraph at lines 1184--1185
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (166.02196pt too wide) in paragraph at lines 1188--1189
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (166.02196pt too wide) in paragraph at lines 1189--1190
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (75.55478pt too wide) in paragraph at lines 1194--1195
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (157.79767pt too wide) in paragraph at lines 1198--1199
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (166.02196pt too wide) in paragraph at lines 1200--1201
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (314.05916pt too wide) in paragraph at lines 1206--1207
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+
+Overfull \hbox (124.90051pt too wide) in paragraph at lines 1210--1211
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[44]
+Overfull \hbox (124.90051pt too wide) in paragraph at lines 1220--1221
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (100.22765pt too wide) in paragraph at lines 1221--1222
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (9.76047pt too wide) in paragraph at lines 1246--1247
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[45]
+Overfull \hbox (34.43333pt too wide) in paragraph at lines 1266--1267
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (412.75063pt too wide) in paragraph at lines 1271--1272
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (59.1062pt too wide) in paragraph at lines 1272--1273
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (133.1248pt too wide) in paragraph at lines 1274--1275
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (26.20905pt too wide) in paragraph at lines 1297--1298
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[46]
+Overfull \hbox (264.71342pt too wide) in paragraph at lines 1305--1306
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (133.1248pt too wide) in paragraph at lines 1308--1309
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (42.65762pt too wide) in paragraph at lines 1335--1336
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (264.71342pt too wide) in paragraph at lines 1340--1341
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[47]
+Overfull \hbox (264.71342pt too wide) in paragraph at lines 1342--1343
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (133.1248pt too wide) in paragraph at lines 1345--1346
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (42.65762pt too wide) in paragraph at lines 1365--1366
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (149.57338pt too wide) in paragraph at lines 1366--1367
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (108.45193pt too wide) in paragraph at lines 1373--1374
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[48]
+Overfull \hbox (42.65762pt too wide) in paragraph at lines 1388--1389
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (149.57338pt too wide) in paragraph at lines 1389--1390
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (108.45193pt too wide) in paragraph at lines 1396--1397
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (289.38629pt too wide) in paragraph at lines 1408--1409
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (314.05916pt too wide) in paragraph at lines 1412--1413
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (133.1248pt too wide) in paragraph at lines 1422--1423
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[49]
+Overfull \hbox (305.83487pt too wide) in paragraph at lines 1430--1431
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.53618pt too wide) in paragraph at lines 1433--1434
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (330.50774pt too wide) in paragraph at lines 1435--1436
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1441--1441
+|\T2A/cmr/bx/n/17.28 test.html|
+ []
+
+[50]
+Underfull \hbox (badness 10000) in paragraph at lines 1480--1480
+|\T2A/cmr/bx/n/17.28 index.html|
+ []
+
+
+Overfull \hbox (231.81627pt too wide) in paragraph at lines 1487--1488
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (42.65762pt too wide) in paragraph at lines 1488--1489
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.53618pt too wide) in paragraph at lines 1489--1490
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (215.36769pt too wide) in paragraph at lines 1490--1491
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (75.55478pt too wide) in paragraph at lines 1494--1495
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (272.93771pt too wide) in paragraph at lines 1495--1496
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (281.162pt too wide) in paragraph at lines 1496--1497
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (108.45193pt too wide) in paragraph at lines 1497--1498
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[51]
+Overfull \hbox (26.20905pt too wide) in paragraph at lines 1507--1508
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (26.20905pt too wide) in paragraph at lines 1526--1527
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1532.
+[52]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1532.
  (D:\ProjectsPHP\Chart\documentation\Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 421.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 421.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1532.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1532.
+
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 500AC72319DBC781FF5D172BD1C42244;6315.
+(rerunfilecheck)             Checksum: 6E12EB2EFB89A3034E98239AB30F5F76;7308.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 421.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1532.
  ) 
 Here is how much of TeX's memory you used:
- 10341 strings out of 493921
- 141256 string characters out of 3154549
- 212110 words of memory out of 3000000
- 13460 multiletter control sequences out of 15000+200000
+ 13477 strings out of 493921
+ 183724 string characters out of 3154549
+ 275518 words of memory out of 3000000
+ 15496 multiletter control sequences out of 15000+200000
  11868 words of font info for 28 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,7n,32p,1103b,451s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,8n,35p,1103b,1770s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
 r\lh\lh-t2a\dpi600\latt1440.pk> <C:\Users\РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ\AppData\Lo
 cal\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1440.pk> <C:\Users\РђРґРјРё
@@ -1322,9 +2074,9 @@ pi600\labx2074.pk> <C:\Users\РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ\AppData\Local\MiKTeX\2.
 9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm1200.pk> <C:\Users\РђРґРјРёРЅРёСЃС‚СЂР°С
 ‚РѕСЂ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\unknown\unknown\dpi600\larm1440.
 pk><D:/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report.pdf (20 pages, 333808 bytes).
+Output written on Report.pdf (52 pages, 1091715 bytes).
 PDF statistics:
- 689 PDF objects out of 1000 (max. 8388607)
- 76 named destinations out of 1000 (max. 500000)
- 232 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2196 PDF objects out of 2487 (max. 8388607)
+ 1153 named destinations out of 1200 (max. 500000)
+ 297 words of extra memory for PDF output out of 10000 (max. 10000000)
 
