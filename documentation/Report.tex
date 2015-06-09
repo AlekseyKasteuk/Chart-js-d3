@@ -15,7 +15,7 @@
 
 
 \titleformat{\section}
-{\normalfont\bfseries}{\thesection}{0.5em}{}
+{\normalfont\large\bfseries}{\thesection}{0.5em}{}
 
 \titlespacing*{\chapter} {0pt}{\baselineskip}{20pt}
 
@@ -101,8 +101,8 @@
 	\item Срок сдачи студентом законченной работы \underline{09.06.2015}
 	\item Исходные данные к работе \underline{Среда разработки Sublime text 2. }
 	\item Содержание расчётно-пояснительной записки (перечень вопросов, которые подлежат разработке)\\
-	\underline{\hspace*{16cm}}\hspace*{-16cm}Введение. 2. Постановка задачи. 3.Разработка программного средства.\\
-	\underline{\hspace*{16cm}}\hspace*{-16cm}4. Тестирование программного средства. Руководство пользователя.\\
+	\underline{\hspace*{16cm}}\hspace*{-16cm}Введение. 1. Постановка задачи. 2.Разработка программного средства.\\
+	\underline{\hspace*{16cm}}\hspace*{-16cm}3. Тестирование программного средства. 4. Руководство пользователя.\\
 	\underline{\hspace*{16cm}}\hspace*{-16cm} Заключение. Список используемой литературы. Приложения.\\
 	\item Перечень графического материала (с точным обозначением обязательных чертежей и графиков)\\
 	\underline{1. Схема алгоритма}
@@ -151,7 +151,7 @@
 	\item Круговая диаграмма
 	\item Гистограмма
 	\item Объемная круговая диаграмма
-	\item Объемная кольчатая диаграмма
+	\item Объемная кольцевая диаграмма
 \end{enumerate}
 \newpage
 \chapter{Разработка\enspaceпрограммного\enspaceсредства}
@@ -260,7 +260,7 @@ function getDomain(data, index) {
 \caption{Блок-схема функции получения области отображения значений графика}
 \label{ris:image}
 \end{figure}
-\subsection{Получение\enspaceмассива\enspaceзначений\enspaceдля\enspaceграфиков}
+\subsection{Получение\enspaceмассива\enspaceзначений\enspaceдля\enspaceграфика}
 \hspace{4ex}Главной задачей данной функции является выделение всех включений шаблона "[число число]" и преобразование полученных данных в массив.
 \begin{verbatim}
 function getPointData(seriesSet) {
@@ -283,7 +283,7 @@ function getPointData(seriesSet) {
 \caption{Блок-схема функции получения массива значений для графиков}
 \label{ris:image}
 \end{figure}
-\subsection{Создание\enspaceшкалы\enspaceдля\enspaceграфиков}
+\subsection{Создание\enspaceшкалы\enspaceдля\enspaceграфика}
 \hspace{4ex}При вызове данной функции происхоит поиск минимального и максимального значения графика, рисуются шкалы и возвращается функции, для шкал.
 \newpage
 \begin{figure}[h]
@@ -343,4 +343,79 @@ i++;
 \label{ris:image}
 \end{figure}
 \hspace{4ex}При наведение курсора мышки на диаграмму, остается подсвеченной только та её часть, внутри которой находится указатель.
+\subsection{Создание\enspaceшкал\enspaceдля\enspaceгистограммы}
+\hspace{4ex}При выполнении данной функции на текущем SVG-элементе появляется шкала, у которой по оси абсцис расположены цифры от 0 до максимального значения элементов гистограммы, а на оси ординат --- названия колонок.
+\hspace{4ex}В итоге, функция возващает объект, у котороего есть два поля:
+\begin{enumerate}
+	\item Шкала X
+	\item Шкала Y
+\end{enumerate}
+\begin{verbatim}
+var yScale = d3.scale.linear()
+    .range([height - margins.top,
+        margins.bottom
+    ])
+    .domain(yDomain);
+
+var xAxis = d3.svg.axis()
+    .scale(xScale)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(yScale)
+    .orient("left");
+element.select('svg').append("g")
+    .attr("class", "axis x")
+    .attr("transform", "translate(0," + (height - margins.bottom) + ")")
+    .call(xAxis);
+element.select('svg').append("g")
+    .attr("class", "axis y")
+    .attr("transform", "translate(" + (margins.left) + ",0)")
+    .call(yAxis);
+return {x: xScale, y:yScale};
+\end{verbatim}
+\subsection{Отображение\enspaceгистограммы}
+\hspace{4ex}Функция отображения предназначена для отрисовки SVG-элементов \textit{rect} расположенных верникально. Ширина столбцов определяется автоматически с помощью функции \textit{.rangeBand()} у шкалы X.
+\newpage
+\begin{figure}[h]
+\center{\includegraphics{bar.png}}
+\caption{Блок-схема функции отображения гистограммы}
+\label{ris:image}
+\end{figure}
+\hspace{4ex}При наверении мышкой на столбец, все элементы, кроме выбранного пракически исчезают, что наглядно показывает, какой элемент выбран на данный момент.
+\subsection{3D\enspaceэлементы}
+\hspace{4ex}Элементы выполненные в 3D-формате (объемная круговая диаграмма и объемная кольцевая диаграмма) выполнены в отдельном файле 3D.js, в котором присутствует анонимная самовызывающая функция, главным элементом которой является объект Donut3D. Отрисовка выполняется поочередным отображением сперва внутренней, потом верхней, а затем внешней границы сектора объемной диагаммы.
+\newpage
+\begin{figure}[h]
+\center{\includegraphics{3D.png}}
+\caption{Блок-схема функции отображения 3D-элементов}
+\label{ris:image}
+\end{figure}
+\chapter{Тестирование\enspaceпрограммного\enspaceсредства}
+\hspace{4ex}Тестирование данного ПС было сделано с использованием библиотек:
+\begin{itemize}
+	\item \textit{mocha.js} (служит средой для запуска тестов)
+	\item \textit{chai.js} (служит для облегчения понимания написанных тестов, более читабельного кода)
+	\item \textit{sinon.js} (предоставляет элемент spy() для тестирования функций)
+	\item \textit{sinon-chai.js} (служит для служит для облегчения понимания тестов, написанных с использованием элементов spy())
+\end{itemize}
+\hspace{4ex}Код unit-тестов находится в Приложении-Б.
+\begin{figure}[h]
+\center{\includegraphics[scale=0.86]{tests.png}}
+\caption{Результаты тестов}
+\label{ris:image}
+\end{figure}
+\chapter{Руководство\enspaceпользователя}
+\section{Установка}
+\subsection{Установка\enspaceчерез\enspace npm}
+\hspace{4ex}Для установки данным способом необходимо, чтобы на компьютере был установлен \textbf{node.js} и \textbf{npm}.
+\hspace{4ex}Необходимо зайти в папку, куда должен быть установлен пакет, и ввести комманду:
+\begin{verbatim}
+    npm install chart-js-d3 --save
+\end{verbatim}
+\hspace{4ex}Далее на html-страницу желательно подключить стандартные стили разработчика:
+\begin{verbatim}
+    <link rel="stylesheet" type="text/css" 
+    href="node_modules/chart-js-d3/css/style.css">
+\end{verbatim} 
 \end{document}

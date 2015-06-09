@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.3)  9 JUN 2015 00:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.3)  9 JUN 2015 03:06
 entering extended mode
 **Report.tex
 (D:\ProjectsPHP\Chart\documentation\Report.tex
@@ -694,6 +694,15 @@ LaTeX Warning: Label `ris:image' multiply defined.
 
 LaTeX Warning: Label `ris:image' multiply defined.
 
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
+
+LaTeX Warning: Label `ris:image' multiply defined.
+
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
 LaTeX Font Info:    ... okay on input line 46.
@@ -840,7 +849,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--157
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 158--158
- |[]\T2A/cmr/bx/n/14.4 Обоснованиевыбораинформационныхтехнологий|
+ |[]\T2A/cmr/bx/n/17.28 Обоснованиевыбораинформационныхтехнологий|
  []
 
 
@@ -860,7 +869,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 160--160
- |[]\T2A/cmr/bx/n/14.4 Используемыесредстваразработки|
+ |[]\T2A/cmr/bx/n/17.28 Используемыесредстваразработки|
  []
 
 
@@ -875,7 +884,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 164--164
- |[]\T2A/cmr/bx/n/14.4 Разработкапрограммногосредства|
+ |[]\T2A/cmr/bx/n/17.28 Разработкапрограммногосредства|
  []
 
 
@@ -920,7 +929,7 @@ File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 ) [7
 
 ]
-<img/start.png, id=133, 181.42781pt x 302.63063pt>
+<img/start.png, id=171, 181.42781pt x 302.63063pt>
 File: img/start.png Graphic file (type png)
  <use img/start.png>
 Package pdftex.def Info: img/start.png used on input line 189.
@@ -946,7 +955,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                replaced by space on input line 193.
 
 [8 <D:/ProjectsPHP/Chart/documentation/img/start.png>]
-<img/legend_draw.png, id=139, 181.42781pt x 302.63063pt>
+<img/legend_draw.png, id=177, 181.42781pt x 302.63063pt>
 File: img/legend_draw.png Graphic file (type png)
 
 <use img/legend_draw.png>
@@ -988,7 +997,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                replaced by space on input line 217.
 
 [9 <D:/ProjectsPHP/Chart/documentation/img/legend_draw.png>]
-<img/series.png, id=145, 554.82281pt x 438.13687pt>
+<img/series.png, id=183, 554.82281pt x 438.13687pt>
 File: img/series.png Graphic file (type png)
  <use img/series.png>
 Package pdftex.def Info: img/series.png used on input line 235.
@@ -1019,14 +1028,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                replaced by space on input line 239.
 
 [10 <D:/ProjectsPHP/Chart/documentation/img/series.png>]
-<img/getDomain.png, id=157, 187.45032pt x 227.34938pt>
+<img/getDomain.png, id=195, 187.45032pt x 227.34938pt>
 File: img/getDomain.png Graphic file (type png)
  <use img/getDomain.png>
 Package pdftex.def Info: img/getDomain.png used on input line 259.
 (pdftex.def)             Requested size: 187.44984pt x 227.34882pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 263--263
- |[]\T2A/cmr/bx/n/14.4 Получениемассивазначенийдляграфиков|
+ |[]\T2A/cmr/bx/n/14.4 Получениемассивазначенийдляграфика|
  []
 
 
@@ -1050,7 +1059,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                replaced by space on input line 263.
 
 [11 <D:/ProjectsPHP/Chart/documentation/img/getDomain.png>]
-<img/getPointData.png, id=163, 187.45032pt x 251.43938pt>
+<img/getPointData.png, id=201, 187.45032pt x 251.43938pt>
 File: img/getPointData.png Graphic file (type png)
 
 <use img/getPointData.png>
@@ -1058,7 +1067,7 @@ Package pdftex.def Info: img/getPointData.png used on input line 282.
 (pdftex.def)             Requested size: 187.44984pt x 251.43875pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 286--286
- |[]\T2A/cmr/bx/n/14.4 Созданиешкалыдляграфиков|
+ |[]\T2A/cmr/bx/n/14.4 Созданиешкалыдляграфика|
  []
 
 
@@ -1077,7 +1086,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                replaced by space on input line 286.
 
 [12 <D:/ProjectsPHP/Chart/documentation/img/getPointData.png>]
-<img/createNumericScales.png, id=169, 187.45032pt x 261.22594pt>
+<img/createNumericScales.png, id=207, 187.45032pt x 261.22594pt>
 File: img/createNumericScales.png Graphic file (type png)
 
 <use img/createNumericScales.png>
@@ -1104,7 +1113,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                replaced by space on input line 294.
 
 [13 <D:/ProjectsPHP/Chart/documentation/img/createNumericScales.png>]
-<img/point.png, id=176, 187.45032pt x 204.765pt>
+<img/point.png, id=214, 187.45032pt x 204.765pt>
 File: img/point.png Graphic file (type png)
  <use img/point.png>
 Package pdftex.def Info: img/point.png used on input line 312.
@@ -1159,48 +1168,163 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 6.85352pt
 (hyperref)                replaced by space on input line 338.
 
-<img/pie.png, id=182, 187.45032pt x 377.91188pt>
+<img/pie.png, id=220, 187.45032pt x 377.91188pt>
 File: img/pie.png Graphic file (type png)
  <use img/pie.png>
 Package pdftex.def Info: img/pie.png used on input line 341.
 (pdftex.def)             Requested size: 187.44984pt x 377.91095pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 346.
- [15 <D:/ProjectsPHP/Chart/documentation/img/pie.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 346.
 
-(D:\ProjectsPHP\Chart\documentation\Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 346.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 346.
+Underfull \hbox (badness 10000) in paragraph at lines 346--346
+ |[]\T2A/cmr/bx/n/14.4 Созданиешкалдлягистограммы|
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 346.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 346.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 346.
+
+[15 <D:/ProjectsPHP/Chart/documentation/img/pie.png>]
+Overfull \hbox (42.5054pt too wide) in paragraph at lines 376--376
+[]    \T2A/cmtt/m/n/14.4 .attr("transform", "translate(0," + (height - margins.
+bottom) + ")")[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--377
+ |[]\T2A/cmr/bx/n/14.4 Отображениегистограммы|
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 377.
+
+[16] <img/bar.png, id=232, 187.45032pt x 323.70938pt>
+File: img/bar.png Graphic file (type png)
+ <use img/bar.png>
+Package pdftex.def Info: img/bar.png used on input line 381.
+(pdftex.def)             Requested size: 187.44984pt x 323.70859pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--386
+ |[]\T2A/cmr/bx/n/14.4 3Dэлементы|
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 386.
+
+[17 <D:/ProjectsPHP/Chart/documentation/img/bar.png>]
+<img/3D.png, id=238, 187.45032pt x 323.70938pt>
+File: img/3D.png Graphic file (type png)
+ <use img/3D.png>
+Package pdftex.def Info: img/3D.png used on input line 390.
+(pdftex.def)             Requested size: 187.44984pt x 323.70859pt.
+ [18 <D:/ProjectsPHP/Chart/documentation/img/3D.png>]
+{\Russian \CYRG \cyrl \cyra \cyrv \cyra } 3.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 394.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 394.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--394
+|\T2A/cmr/bx/n/20.74 3 Те-сти-ро-ва-ниепрограммногосредства|
+ []
+
+<img/tests.png, id=244, 295.1025pt x 443.40656pt>
+File: img/tests.png Graphic file (type png)
+ <use img/tests.png>
+Package pdftex.def Info: img/tests.png used on input line 404.
+(pdftex.def)             Requested size: 253.78769pt x 381.32896pt.
+ [19
+
+ <D:/ProjectsPHP/Chart/documentation/img/tests.png>]
+{\Russian \CYRG \cyrl \cyra \cyrv \cyra } 4.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 408.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 408--408
+|\T2A/cmr/bx/n/20.74 4 Ру-ко-вод-ствопользователя|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--409
+ |[]\T2A/cmr/bx/n/17.28 Установка|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 410--410
+ |[]\T2A/cmr/bx/n/14.4 Установкачерезnpm|
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 410.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 6.85352pt
+(hyperref)                replaced by space on input line 410.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 421.
+[20
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 421.
+ (D:\ProjectsPHP\Chart\documentation\Report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 421.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 421.
 Package rerunfilecheck Info: File `Report.out' has not changed.
-(rerunfilecheck)             Checksum: 41108B9D128D0FBCC653FDC01E93C97C;4753.
+(rerunfilecheck)             Checksum: 500AC72319DBC781FF5D172BD1C42244;6315.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 346.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 421.
  ) 
 Here is how much of TeX's memory you used:
- 10301 strings out of 493921
- 140732 string characters out of 3154549
- 212169 words of memory out of 3000000
- 13440 multiletter control sequences out of 15000+200000
- 11048 words of font info for 27 fonts, out of 3000000 for 9000
+ 10341 strings out of 493921
+ 141256 string characters out of 3154549
+ 212110 words of memory out of 3000000
+ 13460 multiletter control sequences out of 15000+200000
+ 11868 words of font info for 28 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,6n,32p,1103b,451s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,7n,32p,1103b,451s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
 r\lh\lh-t2a\dpi600\latt1440.pk> <C:\Users\РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ\AppData\Lo
-cal\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\lati1440.pk> <C:\Users\РђРґРјРё
+cal\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx1440.pk> <C:\Users\РђРґРјРё
 РЅРёСЃС‚СЂР°С‚РѕСЂ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\la
-bx1440.pk> <C:\Users\РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ\AppData\Local\MiKTeX\2.9\fonts\
-pk\ljfour\lh\lh-t2a\dpi600\larm1728.pk> <C:\Users\РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ\Ap
-pData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\labx2074.pk> <C:\Users\
+ti1440.pk> <C:\Users\РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ\AppData\Local\MiKTeX\2.9\fonts\
+pk\ljfour\lh\lh-t2a\dpi600\labx1728.pk> <C:\Users\РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ\Ap
+pData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm1728.pk> <C:\Users\
 РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\lh\lh-t2a\d
-pi600\larm1200.pk> <C:\Users\РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ\AppData\Local\MiKTeX\2.
-9\fonts\pk\ljfour\unknown\unknown\dpi600\larm1440.pk><D:/MikTex/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb>
-Output written on Report.pdf (15 pages, 261108 bytes).
+pi600\labx2074.pk> <C:\Users\РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ\AppData\Local\MiKTeX\2.
+9\fonts\pk\ljfour\lh\lh-t2a\dpi600\larm1200.pk> <C:\Users\РђРґРјРёРЅРёСЃС‚СЂР°С
+‚РѕСЂ\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\unknown\unknown\dpi600\larm1440.
+pk><D:/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Report.pdf (20 pages, 333808 bytes).
 PDF statistics:
- 553 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 500000)
- 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 689 PDF objects out of 1000 (max. 8388607)
+ 76 named destinations out of 1000 (max. 500000)
+ 232 words of extra memory for PDF output out of 10000 (max. 10000000)
 
